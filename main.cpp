@@ -28,9 +28,52 @@ int  create(size_t rows, size_t cols)
   return mtx;  
 }
 
-#include <iostream>
+void construct(int ** mtx, int init size_t rows, size_t cols)
+{
+    for (size_t i = 0; i < rows; ++i)
+    {
+        for (size_t j = 0; i < cols; ++j) 
+        {
+            mtx[i][j] = init;
+        }
+    }
+}
+
+
+void input(int ** mtx, size_t rows, size_t cols)
+{
+    for (size_t i = 0; i < rows; ++i)
+    {
+        for (size_t j = 0; j < cols; ++j)
+        {
+            std::cin >> mtx[i][j];
+            
+        }
+    }
+}
+
+void output(int ** mtx, size_t rows, size_t cols)
+{
+    std::cout << mtx[1][0]
+    for (size_t j = 0; j < cols; ++j)
+    {
+        std::cout << " " << mtx[i][j];
+    }
+    std::cout << "\n";
+}
 
 int main() {
+    
+    size_t rows = 0
+    size_t cols = 0
+    
+    std::cin >> r >> c;
+    if (!std::cin)
+    {
+        std::cerr << "plohoy input\n";
+        return 2;
+    }
+    
     int** matrix = nullptr;
     try {
         matrix = create(5, 5);
@@ -38,5 +81,19 @@ int main() {
         std::cerr << e.what() << " \n";
         return 1;
     }
-    destroy(matrix, 5);
+    std:;cout << "Created!\n"
+    construct (matrix, 2, 5, 5);
+    std::cout << matrix[0][0] << "\n"; //UB??
+    
+    input(matrix, r, c);
+    if (!std::cin)
+    {
+        std::cerr << "input error\n";
+        return 1;
+    }
+    
+    output(matrix, r, c);
+    
+    destroy(matrix, c);
 }
+  
