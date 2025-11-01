@@ -38,5 +38,5 @@ int main() {
         std::cerr << e.what() << " \n";
         return 1;
     }
-    destroy(matrix, 5)
+    destroy(matrix, 5);
 }
